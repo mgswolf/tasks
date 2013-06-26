@@ -5,4 +5,7 @@ pt-BR:
       confirm: "Confirmar exclusão?"
       destroy: "Excluir"
       edit: "Editar"
+      new: "Novo"
       show: "Visualizar"
+    created_at: Criado em
+    updated_at: Atualizado em
