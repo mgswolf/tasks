@@ -1,6 +1,26 @@
-<h1>Usuários</h1>
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.name %> - <%= user.email %></li>
-  <% end %>
-</ul>
+<%= provide(:title,  t('titles.admin.users.index')) %>
+<%= provide :breadcrumb do %>
+    <li class="active"><%= t('shared.admin.nav.users') %></li>
+<% end %>
+
+<div class="page-header">
+  <h2><%=  t('titles.admin.users.index') %></h2>
+</div>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th><%= t_field('user','name') %></th>
+    <th><%= t_field('user','email') %></th>
+    <th><%= t('helpers.created_at') %></th>
+    <th><%=t 'helpers.actions.all' %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @users %>
+  </tbody>
+</table>
+<%= paginate @users %>
+<%= link_to t("helpers.actions.new"),
+            new_admin_user_path,
+            :class => 'btn btn-primary' %>
