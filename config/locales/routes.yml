@@ -1,0 +1,6 @@
+pt-BR:
+  routes:
+    new: 'novo'
+    edit: 'editar'
+    admin: "administrativo"
+    users: "usuarios"
